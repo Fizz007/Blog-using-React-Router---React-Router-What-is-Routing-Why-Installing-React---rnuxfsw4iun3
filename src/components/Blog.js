@@ -12,11 +12,18 @@ export default function Blog() {
         <nav>
           <Link to="/">Home</Link>
           {/* Create NavLink to About and Posts */}
+          <NavLink to='/about'>About</NavLink>
+          <NavLink to='/posts'>Posts</NavLink>
         </nav>
   
         <Switch>
           <Route exact path="/" component={Home} />
           {/* Create Routes to About, PostList and PostDetail */}
+          <Route exact path="/about" component={About} />
+          <Route exact path="/posts" component={PostList} />
+          <Route exact path="/posts/:id" component={PostDetail} />
+         
+         
         </Switch>
       </div>
     );
